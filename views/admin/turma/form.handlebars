@@ -1,0 +1,10 @@
+<h1>Cadastro Turma</h1>
+<form action="/turma/save/{{turmas.[0].[id_turma]}}" method="post">
+    <div class="mb-3">
+        <label for="desc" class="form-label">Descrição</label>
+        <input type="text" class="form-control" id="desc" name="desc" placeholder="Descrição"
+            value="{{turmas.[0].[descricao]}}">
+    </div>
+    <input type="hidden" name="id" value="{{turmas.[0].[id_turma]}}">
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>

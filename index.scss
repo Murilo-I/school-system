@@ -1,0 +1,74 @@
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+    background-image: url('/public/img/background.jpg');
+    background-size: cover;
+}
+
+table,
+form {
+    opacity: .85;
+}
+
+nav {
+    opacity: .9;
+}
+
+label {
+    color: white;
+}
+
+.sign-form label {
+    color: black;
+}
+
+.sign-form {
+    max-width: 300px;
+    margin: auto;
+}
+
+.form-floating {
+    margin: 1rem 0;
+}
+
+.sign-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    margin-top: 10vh;
+    color: white;
+}
+
+.main {
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.main a {
+    text-decoration: none;
+}
+
+.card {
+    margin: 15px;
+}
+
+.footer {
+    width: fit-content;
+    margin: auto;
+}
+
+.alert {
+    display: inline;
+    position: absolute;
+    top: 10vh;
+    right: 15px;
+}

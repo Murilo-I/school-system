@@ -1,0 +1,28 @@
+{
+  "name": "post-structure",
+  "version": "1.0.0",
+  "description": "crude",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index",
+    "sass": "npx sass --watch index.scss:public/css/main.css",
+    "start": "npx concurrently --kill-others \"npm run sass\" \"npm run server\""
+  },
+  "author": "murilo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.2",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.2",
+    "node-sass": "^9.0.0",
+    "sequelize": "^6.33.0"
+  }
+}

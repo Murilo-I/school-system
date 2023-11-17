@@ -1,0 +1,29 @@
+<h1>Cadastro Aluno</h1>
+<form action="/aluno/save/{{alunos.[0].[id_aluno]}}" method="post">
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" value="{{alunos.[0].[nome]}}">
+    </div>
+    <div class="mb-3">
+        <label for="matricula" class="form-label">Matrícula</label>
+        <input type="number" class="form-control" id="matricula" name="matricula" placeholder="Matrícula"
+            value="{{alunos.[0].[matricula]}}">
+    </div>
+    <div class="mb-3">
+        <label for="turma">Turma:</label>
+        <select name="fk_turma" class="form-select">
+            <option>Selecione uma turma</option>
+            {{#each turmas}}
+                {{#if (checkTurmaAluno ../alunos.[0].[fk_turma] id_turma)}}
+                    <option selected value="{{id_turma}}">{{descricao}}</option>
+                {{^}}
+                    <option value="{{id_turma}}">{{descricao}}</option>
+                {{/if}}
+            {{^}}
+                <option value="0">Nenhuma turma registrada</option>
+            {{/each}}
+        </select>
+    </div>
+    <input type="hidden" name="id" value="{{alunos.[0].[id_aluno]}}">
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>

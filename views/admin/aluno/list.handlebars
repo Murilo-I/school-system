@@ -1,0 +1,23 @@
+<h1>Lista Alunos</h1>
+<table class="table table-striped table-hover">
+    {{#each alunos}}
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Matrícula</th>
+        <th>Turma</th>
+        <th style="text-align: center;">Config</th>
+    </tr>
+    <tr>
+        <td>{{id_aluno}}</td>
+        <td>{{nome}}</td>
+        <td>{{matricula}}</td>
+        <td>{{fk_turma}}</td>
+        <td style="text-align: center;">
+            <a href="/aluno/form/{{id_aluno}}" class="btn btn-primary">Edit</a>
+            <button onclick="deleteAluno({{id_aluno}})" class="btn btn-primary">Delete</button>
+        </td>
+    </tr>
+    {{/each}}
+</table>
+{{>_alert}}
