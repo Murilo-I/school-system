@@ -34,4 +34,4 @@ app.use('/aluno', isAuthenticated, aluno_route);
 app.use('/turma', isAuthenticated, turma_route);
 app.use('/home', (req, res) => res.render('home'));
 
-app.listen(8080, () => console.log("server up!"));
+app.listen(3015, () => console.log("server up!"));

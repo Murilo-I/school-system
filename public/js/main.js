@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:8080";
+const baseUrl = "http://localhost:3015";
 
 async function deleteTurma(id) {
     return await fetch(baseUrl + "/turma/delete/" + id, {
