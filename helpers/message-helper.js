@@ -5,11 +5,12 @@ export const info = 'alert-info';
 const types = [success, danger, info];
 
 export function getMessage(req) {
-    var message;
+    let message;
     types.forEach(type => {
         let flash = req.flash(type);
-        if (flash.length > 0)
-            message = { text: flash[0], type: type }
+        if (Array.isArray(flash) && flash.length > 0) {
+            message = { text: flash[0], type: type };
+        }
     });
     return message;
 }
